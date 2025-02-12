@@ -9,17 +9,22 @@ import Target from "../components/Target";
 import ReactLogo from "../components/ReactLogo";
 import Cube from "../components/Cube";
 import Rings from "../components/Rings";
+/* import useLeva from "../hooks/useLeva"; */
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
   const isSmall = useMediaQuery({ maxWidth: 440 });
+  /* const [Leva, { x, y, z }] = useLeva("Cube"); */
 
-  const { deskPosition, deskScale, targetPosition, reactLogoPosition, cubePosition, ringPosition } = calculateSizes(
-    isSmall,
-    isMobile,
-    isTablet
-  );
+  const {
+    deskPosition,
+    deskScale,
+    targetPosition,
+    reactLogoPosition,
+    cubePosition,
+    ringPosition,
+  } = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
     <section className="min-h-screen flex flex-col w-full relative">
