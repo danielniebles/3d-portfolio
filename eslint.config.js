@@ -35,6 +35,7 @@ export default [
       ],
 
       "react/no-unknown-property": ["off", { "ignore": ["JSX"] }],
+      "react/prop-types": ["off", { "ignore": ["JSX"] }]
     },
   },
 ];
